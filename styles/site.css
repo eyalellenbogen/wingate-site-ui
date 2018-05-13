@@ -1,0 +1,352 @@
+@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700|Syncopate");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700|Syncopate");
+.container {
+  width: 1200px;
+  margin: auto; }
+
+.txt-menu-header {
+  font-family: "Syncopate";
+  font-size: 18px;
+  color: #c3920f; }
+
+.txt-header2 {
+  font-family: "Syncopate";
+  font-size: 20px;
+  font-weight: 300;
+  columns: #094fa3; }
+
+.txt-header3 {
+  font-family: "Syncopate";
+  font-size: 18px;
+  font-weight: 500;
+  columns: #094fa3; }
+
+.txt-banner-header {
+  font-family: "Syncopate";
+  font-size: 48px;
+  line-height: 48px;
+  color: #fff; }
+
+.txt-banner-subheader {
+  font-family: "Syncopate";
+  font-size: 30px;
+  line-height: 30px;
+  color: #fff; }
+
+.text-center {
+  text-align: center; }
+
+.btn {
+  outline: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-align: center; }
+  .btn.btn1 {
+    background: none;
+    border: 1px solid #c3920f;
+    color: #c3920f; }
+  .btn.btn2 {
+    color: #fff;
+    border: none;
+    background: #c3920f; }
+
+body,
+html {
+  font-family: "Roboto"; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: font1; }
+
+* {
+  box-sizing: border-box; }
+
+.top-bar .mini-part {
+  height: 39px;
+  background-color: #012a44; }
+  .top-bar .mini-part ul.nav-bar {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .top-bar .mini-part ul.nav-bar li {
+      list-style: none;
+      float: left; }
+    .top-bar .mini-part ul.nav-bar li {
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 39px;
+      color: #fff;
+      display: block;
+      position: relative; }
+      .top-bar .mini-part ul.nav-bar li:last-child:after {
+        display: none; }
+      .top-bar .mini-part ul.nav-bar li:first-child a {
+        padding-left: 0; }
+      .top-bar .mini-part ul.nav-bar li:after {
+        content: "";
+        display: block;
+        height: 13px;
+        width: 1px;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -6.5px; }
+      .top-bar .mini-part ul.nav-bar li a {
+        color: #fff;
+        text-decoration: none;
+        float: left;
+        padding: 0 20px; }
+  .top-bar .mini-part .login-button {
+    font-size: 13px;
+    color: #c3920f;
+    float: right;
+    line-height: 39px;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; }
+    .top-bar .mini-part .login-button:after {
+      content: "X";
+      padding-left: 15px; }
+
+.top-bar .main-part .top-content {
+  height: 105px;
+  position: relative; }
+  .top-bar .main-part .top-content .phone {
+    font-family: "Roboto";
+    font-size: 15px;
+    color: #c3920f;
+    float: left;
+    line-height: 105px; }
+  .top-bar .main-part .top-content .logo {
+    position: absolute;
+    width: 205px;
+    height: 70px;
+    left: 50%;
+    margin-left: -102.5px;
+    top: 50%;
+    margin-top: -35px; }
+  .top-bar .main-part .top-content .search-control {
+    float: right;
+    width: 230px;
+    position: relative;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    right: 0; }
+    .top-bar .main-part .top-content .search-control input {
+      border: none;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      padding: 6px 12px;
+      width: 100%;
+      height: 100%; }
+
+.top-bar .main-part .top-menu {
+  margin-bottom: 0; }
+  .top-bar .main-part .top-menu:after {
+    content: "";
+    display: table;
+    clear: both;
+    float: none; }
+  .top-bar .main-part .top-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; }
+    .top-bar .main-part .top-menu ul li {
+      list-style: none;
+      float: left; }
+    .top-bar .main-part .top-menu ul li {
+      font-family: "Syncopate";
+      font-size: 18px;
+      margin-right: 40px;
+      float: none; }
+      .top-bar .main-part .top-menu ul li:last-child {
+        margin-right: 0; }
+      .top-bar .main-part .top-menu ul li a {
+        color: #c3920f;
+        text-decoration: none; }
+
+.top-bar .plasma {
+  height: 485px;
+  background-image: url("../images/review_bg.png");
+  background-size: cover;
+  position: relative; }
+  .top-bar .plasma:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#001935+0,001935+75,001935+100&0+0,0.5+75,1+100 */
+    background: -moz-linear-gradient(top, rgba(0, 25, 53, 0) 0%, rgba(0, 25, 53, 0.5) 75%, #001935 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 25, 53, 0) 0%, rgba(0, 25, 53, 0.5) 75%, #001935 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 25, 53, 0) 0%, rgba(0, 25, 53, 0.5) 75%, #001935 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00001935', endColorstr='#001935',GradientType=0 );
+    /* IE6-9 */ }
+  .top-bar .plasma .container {
+    position: relative;
+    height: 100%; }
+    .top-bar .plasma .container .content {
+      transform: translateY(-50%);
+      top: 50%;
+      position: absolute; }
+      .top-bar .plasma .container .content h1 {
+        margin: 0 0 20px;
+        font-family: "Syncopate";
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 500;
+        color: #fff; }
+      .top-bar .plasma .container .content h2 {
+        margin: 0 0 20px;
+        font-family: "Syncopate";
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff; }
+      .top-bar .plasma .container .content button {
+        border: 1px solid #c3920f;
+        color: #c3920f;
+        background-color: transparent;
+        border-radius: 4px;
+        font-size: 20px;
+        font-family: "Syncopate";
+        padding: 6px 12px;
+        width: 250px; }
+
+.product-box {
+  text-align: center; }
+  .product-box h3.title {
+    font-family: "Syncopate";
+    font-size: 18px;
+    color: #094fa3;
+    text-align: center; }
+  .product-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; }
+    .product-box ul li {
+      list-style: none;
+      float: left; }
+    .product-box ul:after {
+      content: "";
+      display: table;
+      clear: both;
+      float: none; }
+    .product-box ul li {
+      margin-right: 38px;
+      float: none; }
+      .product-box ul li:last-child {
+        margin-right: 0; }
+      .product-box ul li .item-box {
+        text-align: center; }
+        .product-box ul li .item-box .item-image {
+          border: 1px solid #cacaca;
+          width: 170px;
+          height: 232px;
+          background-color: #fff; }
+        .product-box ul li .item-box .item-name {
+          margin-top: 6px;
+          font-family: "Roboto";
+          font-size: 15px;
+          color: #094fa3; }
+        .product-box ul li .item-box .old-price {
+          margin-top: 6px;
+          font-family: "Roboto";
+          font-size: 12px;
+          color: #797979; }
+        .product-box ul li .item-box .price {
+          margin-top: 6px;
+          font-family: "Roboto";
+          font-size: 15px;
+          color: #1f1500; }
+  .product-box button.buy-now {
+    margin-top: 10px; }
+
+.page-content {
+  width: 1020px;
+  margin: auto; }
+  .page-content button.show-all {
+    margin-top: 30px; }
+  .page-content .brand-box {
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/top_brands_bg.png");
+    padding: 30px 50px;
+    position: relative; }
+    .page-content .brand-box .title {
+      font-family: "Syncopate";
+      font-size: 20px;
+      color: #c3920f;
+      margin: 0; }
+    .page-content .brand-box ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: 600px;
+      margin-top: 34px; }
+      .page-content .brand-box ul li {
+        list-style: none;
+        float: left; }
+      .page-content .brand-box ul:after {
+        content: "";
+        display: table;
+        clear: both;
+        float: none; }
+      .page-content .brand-box ul li {
+        font-family: "Roboto";
+        font-size: 18px;
+        width: 200px;
+        margin-bottom: 30px; }
+        .page-content .brand-box ul li a {
+          color: #fff;
+          text-decoration: none; }
+    .page-content .brand-box a.view-all {
+      position: absolute;
+      bottom: 30px;
+      font-family: "Roboto";
+      font-size: 18px;
+      font-weight: 700;
+      color: #c3920f;
+      text-decoration: none; }
+
+.bottom-part {
+  margin-top: 30px; }
+  .bottom-part .trending-box {
+    height: 370px;
+    padding: 35px 0;
+    position: relative;
+    background-repeat: repeat;
+    background-image: linear-gradient(50deg, #012a44 0%, #004d95 100%); }
+    .bottom-part .trending-box:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url("../images/trending_pattern.png"); }
+    .bottom-part .trending-box h3 {
+      margin: 0;
+      font-family: "Syncopate";
+      font-size: 18px;
+      color: #fff; }

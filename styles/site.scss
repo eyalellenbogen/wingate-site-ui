@@ -1,0 +1,367 @@
+@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css);
+@import "./core/_styles.scss";
+@import "./core/_resets.scss";
+
+body,
+html {
+  font-family: $font2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: font1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.top-bar {
+  $height: 39px;
+
+  .mini-part {
+    height: $height;
+    background-color: #012a44;
+
+    ul.nav-bar {
+      @include ulMenu();
+
+      li {
+        font-family: $font2;
+        font-weight: $font-weight-light;
+        font-size: 13px;
+        line-height: $height;
+        color: #fff;
+        display: block;
+        position: relative;
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+
+        &:first-child {
+          a {
+            padding-left: 0;
+          }
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          height: 13px;
+          width: 1px;
+          background-color: #fff;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -6.5px;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          float: left;
+          padding: 0 20px;
+        }
+      }
+    }
+
+    .login-button {
+      font-size: $font-size-xxs;
+      color: $accent2;
+      float: right;
+      line-height: $height;
+      border: none;
+      outline: none;
+      background: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+
+      &:after {
+        content: "X";
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .main-part {
+    .top-content {
+      $height: 105px;
+      height: $height;
+      position: relative;
+
+      .phone {
+        @include textMedium;
+        color: $accent2;
+        float: left;
+        line-height: $height;
+      }
+
+      .logo {
+        position: absolute;
+        width: 205px;
+        height: 70px;
+        left: 50%;
+        margin-left: -102.5px;
+        top: 50%;
+        margin-top: -35px;
+      }
+
+      .search-control {
+        float: right;
+        width: 230px;
+        position: relative;
+        height: 36px;
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+        right: 0;
+
+        input {
+          border: none;
+          background-color: #f2f2f2;
+          border-radius: 5px;
+
+          padding: 6px 12px;
+          width: 100%;
+          height: 100%;
+
+        }
+      }
+    }
+
+    .top-menu {
+      @include clearfix();
+      margin-bottom: 0;
+
+      ul {
+        @include ulMenu();
+        display: flex;
+        justify-content: center;
+
+        li {
+          @include header2;
+          margin-right: 40px;
+          float: none;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            color: $accent2;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .plasma {
+    height: 485px;
+    background-image: url('../images/review_bg.png');
+    background-size: cover;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#001935+0,001935+75,001935+100&0+0,0.5+75,1+100 */
+      background: -moz-linear-gradient(top, rgba(0,25,53,0) 0%, rgba(0,25,53,0.5) 75%, rgba(0,25,53,1) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(0,25,53,0) 0%,rgba(0,25,53,0.5) 75%,rgba(0,25,53,1) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0,25,53,0) 0%,rgba(0,25,53,0.5) 75%,rgba(0,25,53,1) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00001935', endColorstr='#001935',GradientType=0 );
+      /* IE6-9 */
+    }
+
+    .container {
+      position: relative;
+      height: 100%;
+
+      .content {
+        transform: translateY(-50%);
+        top: 50%;
+        position: absolute;
+
+        h1 {
+          margin: 0 0 20px;
+          @include headerSuper();
+          font-weight: $font-weight-normal;
+          color: #fff;
+        }
+
+        h2 {
+          margin: 0 0 20px;
+          @include headerBig();
+          color: #fff;
+        }
+
+        button {
+          border: 1px solid $accent2;
+          color: $accent2;
+          background-color: transparent;
+          border-radius: 4px;
+          font-size: $font-size-lg;
+          font-family: $font1;
+          padding: 6px 12px;
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+
+.product-box {
+  text-align: center;
+
+  h3.title {
+    @include header2();
+    color: $accent1;
+    text-align: center;
+  }
+
+  ul {
+    @include ulMenu();
+    @include clearfix();
+
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin-right: 38px;
+      float: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .item-box {
+        $textMargin: 6px;
+        text-align: center;
+
+        .item-image {
+          border: 1px solid #cacaca;
+          width: 170px;
+          height: 232px;
+          background-color: #fff;
+        }
+
+        .item-name {
+          margin-top: $textMargin;
+          @include textMedium();
+          color: $accent1;
+        }
+
+        .old-price {
+          margin-top: $textMargin;
+          @include textSmall();
+          color: $light1;
+        }
+
+        .price {
+          margin-top: $textMargin;
+          @include textMedium();
+          color: $dark1;
+        }
+      }
+    }
+  }
+
+  button.buy-now {
+    margin-top: 10px;
+  }
+}
+
+.page-content {
+  width: 1020px;
+  margin: auto;
+
+  button.show-all {
+    margin-top: 30px;
+  }
+
+  .brand-box {
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    background-image: url('../images/top_brands_bg.png');
+    padding: 30px 50px;
+    position: relative;
+
+    .title {
+      @include header1();
+      color: $accent2;
+      margin: 0;
+    }
+
+    ul {
+      @include ulMenu();
+      @include clearfix();
+      max-width: 600px;
+      margin-top: 34px;
+
+      li {
+        @include textBig();
+        width: 200px;
+        margin-bottom: 30px;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+
+    a.view-all {
+      position: absolute;
+      bottom: 30px;
+      @include textBig();
+      font-weight: $font-weight-bold;
+      color: $accent2;
+      text-decoration: none;
+    }
+  }
+}
+
+.bottom-part {
+  margin-top: 30px;
+
+  .trending-box {
+    height: 370px;
+    padding: 35px 0;
+    position: relative;
+    background-repeat: repeat;
+    background-image: linear-gradient(50deg,rgb(1,42,68) 0%,rgb(0,77,149) 100%);
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url("../images/trending_pattern.png");
+
+    }
+
+    h3 {
+      margin: 0;
+      @include header2();
+      color: #fff;
+    }
+  }
+}

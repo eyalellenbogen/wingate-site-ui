@@ -1,0 +1,58 @@
+@import "./_vars.scss";
+@import "./_texts.scss";
+@import "./_resets.scss";
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.txt-menu-header {
+  @include header2();
+  color: $accent2;
+}
+
+.txt-header2 {
+  @include header1();
+  font-weight: $font-weight-light;
+  columns: $accent1;
+}
+
+.txt-header3 {
+  @include header2();
+  font-weight: $font-weight-normal;
+  columns: $accent1;
+}
+
+.txt-banner-header {
+  @include headerSuper();
+  color: #fff;
+}
+
+.txt-banner-subheader {
+  @include headerBig();
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  outline: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-align: center;
+
+  &.btn1 {
+    background: none;
+    border: 1px solid $accent2;
+    color: $accent2;
+  }
+
+  &.btn2 {
+    color: #fff;
+    border: none;
+    background: $accent2;
+  }
+}

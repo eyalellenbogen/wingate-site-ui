@@ -1,0 +1,35 @@
+@import "./_vars";
+@mixin header1() {
+  font-family: $font1;
+  font-size: $font-size-lg;
+}
+@mixin header2() {
+  font-family: $font1;
+  font-size: $font-size-m;
+}
+@mixin header3() {
+  font-family: $font1;
+  font-size: $font-size-xs;
+}
+@mixin headerSuper() {
+  font-family: $font1;
+  font-size: $font-size-xxl;
+  line-height: $font-size-xxl;
+}
+@mixin headerBig() {
+  font-family: $font1;
+  font-size: $font-size-xl;
+  line-height: $font-size-xl;
+}
+@mixin textBig() {
+  font-family: $font2;
+  font-size: $font-size-m;
+}
+@mixin textMedium() {
+  font-family: $font2;
+  font-size: $font-size-s;
+}
+@mixin textSmall() {
+  font-family: $font2;
+  font-size: $font-size-xxxs;
+}

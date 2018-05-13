@@ -1,0 +1,9 @@
+{
+    "easysass.excludeRegex": "^_.+.scss$",
+    "easysass.formats": [
+        {
+            "format": "expanded",
+            "extension": ".css"
+        }
+    ]
+}
