@@ -33,3 +33,8 @@
   font-family: $font2;
   font-size: $font-size-xxxs;
 }
+@mixin paragraphText() {
+  font-family: $font2;
+  font-size: $font-size-s;
+  line-height: 24px;
+}
