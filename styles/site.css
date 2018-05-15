@@ -114,71 +114,144 @@ h6 {
     background: none;
     padding: 0;
     margin: 0;
-    cursor: pointer; }
-    .top-bar .mini-part .login-button:after {
-      content: "X";
-      padding-left: 15px; }
+    cursor: pointer;
+    position: relative; }
+    .top-bar .mini-part .login-button img {
+      position: relative;
+      top: 5px;
+      margin-left: 10px; }
 
-.top-bar .main-part .top-content {
-  height: 105px;
+.top-bar .main-part {
   position: relative; }
-  .top-bar .main-part .top-content .phone {
-    font-family: "Roboto";
-    font-size: 15px;
-    color: #c3920f;
-    float: left;
-    line-height: 105px; }
-  .top-bar .main-part .top-content .logo {
-    position: absolute;
-    width: 205px;
-    height: 70px;
-    left: 50%;
-    margin-left: -102.5px;
-    top: 50%;
-    margin-top: -35px; }
-  .top-bar .main-part .top-content .search-control {
-    float: right;
-    width: 230px;
-    position: relative;
-    height: 36px;
-    position: absolute;
-    top: 50%;
-    margin-top: -18px;
-    right: 0; }
-    .top-bar .main-part .top-content .search-control input {
-      border: none;
-      background-color: #f2f2f2;
-      border-radius: 5px;
-      padding: 6px 12px;
-      width: 100%;
-      height: 100%; }
-
-.top-bar .main-part .top-menu {
-  margin-bottom: 0; }
-  .top-bar .main-part .top-menu:after {
-    content: "";
-    display: table;
-    clear: both;
-    float: none; }
-  .top-bar .main-part .top-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; }
-    .top-bar .main-part .top-menu ul li {
-      list-style: none;
-      float: left; }
-    .top-bar .main-part .top-menu ul li {
-      font-family: "Syncopate";
+  .top-bar .main-part .top-content {
+    height: 105px;
+    position: relative; }
+    .top-bar .main-part .top-content .phone {
+      font-family: "Roboto";
       font-size: 18px;
-      margin-right: 40px;
+      color: #c3920f;
+      float: left;
+      line-height: 105px;
+      position: relative; }
+      .top-bar .main-part .top-content .phone img {
+        height: 18px;
+        position: relative;
+        top: 2px; }
+    .top-bar .main-part .top-content .logo {
+      position: absolute;
+      width: 205px;
+      height: 70px;
+      left: 50%;
+      margin-left: -102.5px;
+      top: 50%;
+      margin-top: -35px; }
+    .top-bar .main-part .top-content .search-control {
+      float: right;
+      width: 230px;
+      position: relative;
+      height: 36px;
+      position: absolute;
+      top: 50%;
+      margin-top: -18px;
+      right: 0; }
+      .top-bar .main-part .top-content .search-control:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        background-image: url("../images/ic-search-24px.svg"); }
+      .top-bar .main-part .top-content .search-control input {
+        border: none;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        outline: none;
+        padding: 6px 30px 6px 14px;
+        width: 100%;
+        height: 100%;
+        position: relative; }
+  .top-bar .main-part .top-menu {
+    margin-bottom: 0;
+    width: 1020px;
+    margin: auto; }
+    .top-bar .main-part .top-menu:after {
+      content: "";
+      display: table;
+      clear: both;
       float: none; }
-      .top-bar .main-part .top-menu ul li:last-child {
-        margin-right: 0; }
-      .top-bar .main-part .top-menu ul li a {
-        color: #c3920f;
-        text-decoration: none; }
+    .top-bar .main-part .top-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between; }
+      .top-bar .main-part .top-menu ul li {
+        list-style: none;
+        float: left; }
+      .top-bar .main-part .top-menu ul li {
+        font-family: "Syncopate";
+        font-size: 18px;
+        margin-right: 40px;
+        float: none;
+        position: relative; }
+        .top-bar .main-part .top-menu ul li.active:after, .top-bar .main-part .top-menu ul li:hover:after {
+          opacity: 1;
+          visibility: visible; }
+        .top-bar .main-part .top-menu ul li:after {
+          opacity: 0;
+          visibility: hidden;
+          transition: all .2s;
+          content: "";
+          position: absolute;
+          z-index: 2;
+          height: 4px;
+          background-color: #c3920f;
+          width: 100%;
+          top: 100%;
+          left: 0; }
+        .top-bar .main-part .top-menu ul li:last-child {
+          margin-right: 0; }
+        .top-bar .main-part .top-menu ul li a {
+          color: #c3920f;
+          text-decoration: none; }
+  .top-bar .main-part .top-menu-drop {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: #f7f7f7;
+    border-top: 1px solid #c3920f; }
+    .top-bar .main-part .top-menu-drop.on {
+      visibility: visible;
+      opacity: 1; }
+    .top-bar .main-part .top-menu-drop .content {
+      width: 1020px;
+      margin: 36px auto auto;
+      padding: 0 12px; }
+      .top-bar .main-part .top-menu-drop .content .col {
+        width: 150px;
+        float: left;
+        margin-right: 15px; }
+        .top-bar .main-part .top-menu-drop .content .col.col-ex {
+          width: 220px; }
+          .top-bar .main-part .top-menu-drop .content .col.col-ex > a {
+            height: 36px;
+            color: #012a44;
+            font-size: 15px; }
+        .top-bar .main-part .top-menu-drop .content .col > a {
+          display: block;
+          font-size: 14px;
+          font-family: "Roboto";
+          color: #1f1500;
+          text-decoration: none;
+          height: 28px; }
 
 .top-bar .plasma {
   height: 485px;
