@@ -1,0 +1,243 @@
+.bottom-part {
+  margin-top: 30px;
+
+  .trending-box {
+    height: 370px;
+    padding: 35px 0;
+    position: relative;
+    background-repeat: repeat;
+    background-image: linear-gradient(50deg,rgb(1,42,68) 0%,rgb(0,77,149) 100%);
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url("../images/trending_pattern.png");
+
+    }
+
+    .product-box {
+      h3 {
+        margin: 0;
+        @include header2();
+        color: #fff;
+      }
+
+      ul {
+        margin-top: 35px;
+
+        li {
+          .item-box {
+            .item-image {
+              height: 170px;
+            }
+
+            .item-name {
+              font-size: $font-size-xs;
+              color: $accent2;
+              margin-top: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .review-box {
+    height: 366px;
+    background-image: url("../images/review_bg.png");
+    background-size: cover;
+    margin: 0;
+
+    ul.carousel {
+      @include ulMenu();
+      width: $contentWidth;
+      margin: auto;
+      padding-top: 88px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      li {
+        float: none;
+
+        .review-item {
+          position: relative;
+          width: 330px;
+          height: 210px;
+          padding: 14px 18px;
+          background: rgba($color: #fff, $alpha: 0.85);
+          @include paragraphText();
+
+          .from-name {
+            color: $accent1;
+          }
+
+          p {
+            margin: 0;
+            color: $dark1;
+          }
+
+          .review-rating {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+
+            i.rating-star {
+              display: block;
+              width: 15px;
+              height: 15px;
+              background-image: url("../images/ic-star.svg");
+              margin: 0 3px;
+            }
+          }
+
+          a.fb-link {
+            text-decoration: none;
+            color: $accent1;
+            position: absolute;
+            bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-columns {
+    @include clearfix();
+
+    > .col {
+      width: 50%;
+      float: left;
+      padding-top: 58px;
+      height: 325px;
+
+      .content {
+        width: 420px;
+
+        h3 {
+          @include header2();
+        }
+
+        p {
+          @include paragraphText();
+        }
+      }
+
+      &.left-col {
+        background: #fff;
+        padding-right: 70px;
+
+        .content {
+          float: right;
+
+          h3 {
+            color: $accent1;
+          }
+
+          p {
+            color: $dark1;
+          }
+        }
+      }
+
+      &.right-col {
+        background: $accent2;
+        padding-left: 70px;
+
+        .content {
+          h3 {
+            color: $dark1;
+          }
+
+          p {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+  }
+
+  .buy-with-confidence {
+    background-color: $background;
+    height: 205px;
+    padding-top: 62px;
+
+    h2 {
+      @include header1();
+      color: $dark1;
+      text-align: center;
+      margin: 0;
+    }
+
+    ul.confidence-items {
+      @include ulMenu();
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+
+      li {
+        margin: 0 50px;
+      }
+    }
+  }
+}
+@media (max-width:$mobileBreakpoint) {
+  .bottom-part {
+    .review-box {
+      height: 250px;
+      padding: 18px;
+
+      ul.carousel {
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding-top: 0;
+
+        li {
+          margin: 0 6px;
+        }
+      }
+    }
+
+    .bottom-columns {
+      .col {
+        &.left-col,
+        &.right-col {
+          padding: 40px 30px 25px;
+          float: none;
+          height: auto;
+          width: auto;
+
+          .content {
+            float: none;
+
+            h3 {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .buy-with-confidence {
+      padding: 35px 0;
+      height: auto;
+
+      ul.confidence-items {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+          float: none;
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+}

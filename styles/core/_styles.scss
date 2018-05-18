@@ -46,13 +46,25 @@
 
   &.btn1 {
     background: none;
+    font-family: $font1;
+    font-weight: $font-weight-bold;
     border: 1px solid $accent2;
     color: $accent2;
+    padding: 12px 18px;
   }
 
   &.btn2 {
+    font-family: $font2;
     color: #fff;
     border: none;
     background: $accent2;
+    font-size: $font-size-s;
+    padding: 8px 24px;
+  }
+}
+@media (max-width: $mobileBreakpoint) {
+  .container {
+    width: 100%;
+    padding: 0 18px;
   }
 }
