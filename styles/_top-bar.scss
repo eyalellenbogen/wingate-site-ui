@@ -1,417 +1,16 @@
-
-.top-bar-base {
-  $height: 39px;
-
-  .main-part-mobile {
-    display: none;
-
-    .content {
-      height: 66px;
-      background-color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .left {
-        display: flex;
-        align-content: center;
-
-        button.nav-toggle {
-          background: none;
-          outline: none;
-          border: none;
-          padding: 0;
-
-          span {
-            width: 28px;
-            height: 3px;
-            background-color: $accent2;
-            display: block;
-            margin-bottom: 5px;
-
-            &:nth-child(2) {
-              width: 24px;
-              margin-left: 2px;
-            }
-
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
-
-        .logo {
-          margin-left: 18px;
-
-          img {
-            width: 136px;
-          }
-        }
-      }
-
-      .right {
-        display: flex;
-        align-items: center;
-
-        .search-control-mobile {
-          margin-right: 26px;
-
-          button.search-toggle {
-            background: none;
-            outline: none;
-            border: none;
-            padding: 0;
-            display: block;
-
-            img {
-              display: block;
-            }
-          }
-        }
-
-        a.shop {
-          img {
-            display: block;
-          }
-        }
-
-      }
-    }
-
-    .secondary {
-      font: $font1;
-      color: $accent2;
-      font-size: $font-size-xs;
-
-      .container {
-        background-color: $dark3;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 30px;
-
-        .phone {
-          img {
-            height: 14px;
-            position: relative;
-            top: 2px;
-          }
-        }
-      }
-    }
-  }
-
-  .mini-part {
-    height: $height;
-    background-color: #012a44;
-
-    ul.nav-bar {
-      @include ulMenu();
-
-      li {
-        font-family: $font2;
-        font-weight: $font-weight-light;
-        font-size: 13px;
-        line-height: $height;
-        color: #fff;
-        display: block;
-        position: relative;
-
-        &:last-child {
-          &:after {
-            display: none;
-          }
-        }
-
-        &:first-child {
-          a {
-            padding-left: 0;
-          }
-        }
-
-        &:after {
-          content: "";
-          display: block;
-          height: 13px;
-          width: 1px;
-          background-color: #fff;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          margin-top: -6.5px;
-        }
-
-        a {
-          color: #fff;
-          text-decoration: none;
-          float: left;
-          padding: 0 20px;
-        }
-      }
-    }
-
-    .login-button {
-      font-size: $font-size-xxs;
-      color: $accent2;
-      float: right;
-      line-height: $height;
-      border: none;
-      outline: none;
-      background: none;
-      padding: 0;
-      margin: 0;
-      cursor: pointer;
-      position: relative;
-
-      img {
-        position: relative;
-        top: 5px;
-        margin-left: 10px;
-      }
-    }
-  }
-
-  .main-part {
-    position: relative;
-
-    .top-content {
-      $height: 105px;
-      height: $height;
-      position: relative;
-
-      .phone {
-        @include textBig();
-        color: $accent2;
-        float: left;
-        line-height: $height;
-        position: relative;
-
-        img {
-          height: 18px;
-          position: relative;
-          top: 2px;
-        }
-      }
-
-      .logo {
-        position: absolute;
-        width: 205px;
-        height: 70px;
-        left: 50%;
-        margin-left: -102.5px;
-        top: 50%;
-        margin-top: -35px;
-      }
-
-      .search-control {
-        float: right;
-        width: 230px;
-        position: relative;
-        height: 36px;
-        position: absolute;
-        top: 50%;
-        margin-top: -18px;
-        right: 0;
-
-        &:after {
-          content: "";
-          width: 20px;
-          height: 20px;
-          display: block;
-          position: absolute;
-          top: 6px;
-          right: 8px;
-          background-image: url("../images/ic-search-24px.svg");
-        }
-
-        input {
-          border: none;
-          background-color: #f2f2f2;
-          border-radius: 5px;
-          outline: none;
-          padding: 6px 30px 6px 14px;
-          width: 100%;
-          height: 100%;
-          position: relative;
-        }
-      }
-    }
-
-    .top-menu {
-      @include clearfix();
-      margin-bottom: 0;
-      width: $contentWidth;
-      margin: auto;
-
-      ul {
-        @include ulMenu();
-        display: flex;
-        justify-content: space-between;
-
-        li {
-          @include header2;
-          margin-right: 40px;
-          float: none;
-          position: relative;
-
-          &.active,
-          &:hover {
-            &:after {
-              opacity: 1;
-              visibility: visible;
-            }
-          }
-
-          &:after {
-            opacity: 0;
-            visibility: hidden;
-            transition: all .2s;
-            content: "";
-            position: absolute;
-            z-index: 2;
-            height: 4px;
-            background-color: $accent2;
-            width: 100%;
-            top: 100%;
-            left: 0;
-          }
-
-          &:last-child {
-            margin-right: 0;
-          }
-
-          a {
-            color: $accent2;
-            text-decoration: none;
-          }
-        }
-      }
-
-    }
-
-    .top-menu-drop {
-      &.on {
-        visibility: visible;
-        opacity: 1;
-      }
-      position: absolute;
-      visibility: hidden;
-      opacity: 0;
-      transition: all .2s;
-      left: 0;
-      top: 100%;
-      width: 100%;
-      height: 400px;
-      z-index: 1;
-      background: $background;
-      border-top: 1px solid $accent2;
-
-      .content {
-        width: $contentWidth;
-        margin: 36px auto auto;
-        padding: 0 12px;
-
-        .col {
-          width: 150px;
-          float: left;
-          margin-right: 15px;
-
-          &.col-ex {
-            width: 220px;
-
-            > a {
-              height: 36px;
-              color: $dark3;
-              font-size: $font-size-s;
-            }
-          }
-
-          > a {
-            display: block;
-            font-size: $font-size-xs;
-            font-family: $font2;
-            color: $dark1;
-            text-decoration: none;
-            height: 28px;
-          }
-        }
-      }
-    }
-  }
-
-  .plasma {
-    height: 485px;
-    background-image: url('../images/review_bg.png');
-    background-size: cover;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#001935+0,001935+75,001935+100&0+0,0.5+75,1+100 */
-      background: -moz-linear-gradient(top, rgba(0,25,53,0) 0%, rgba(0,25,53,0.5) 75%, rgba(0,25,53,1) 100%);
-      /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(0,25,53,0) 0%,rgba(0,25,53,0.5) 75%,rgba(0,25,53,1) 100%);
-      /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(0,25,53,0) 0%,rgba(0,25,53,0.5) 75%,rgba(0,25,53,1) 100%);
-      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00001935', endColorstr='#001935',GradientType=0 );
-      /* IE6-9 */
-    }
-
-    .container {
-      position: relative;
-      height: 100%;
-
-      .content {
-        transform: translateY(-50%);
-        top: 50%;
-        position: absolute;
-
-        h1 {
-          margin: 0 0 20px;
-          @include headerSuper();
-          font-weight: $font-weight-normal;
-          color: #fff;
-        }
-
-        h2 {
-          margin: 0 0 20px;
-          @include headerBig();
-          color: #fff;
-        }
-
-        button {
-          border: 1px solid $accent2;
-          color: $accent2;
-          background-color: transparent;
-          border-radius: 4px;
-          font-size: $font-size-lg;
-          font-family: $font1;
-          padding: 6px 12px;
-          width: 250px;
-        }
-      }
-    }
-  }
-}
-
 .top-bar {
   $height: 39px;
 
   .main-part-mobile {
     display: none;
 
-    .content {
+    > .content {
       height: 66px;
       background-color: #fff;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: relative;
 
       .left {
         display: flex;
@@ -453,6 +52,8 @@
       .right {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
+        width: 100%;
 
         .search-control-mobile {
           margin-right: 26px;
@@ -477,12 +78,95 @@
         }
 
       }
+
+      .menu-slide {
+        $buttonSize: 65px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        transition: all .4s;
+        visibility: hidden;
+        opacity: 0;
+
+        &.on {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        button.close {
+          width: $buttonSize;
+          height: $buttonSize;
+          border-width: 0 0 1px 1px;
+          border-color: #737373;
+          outline: none;
+          background-color: $dark2;
+          color: #fff;
+        }
+
+        > .content {
+          background-color: #fff;
+          width: 100%;
+          border-width: 0 1px 1px 0;
+          border-color: #d7d7d7;
+          border-style: solid;
+
+          > .header {
+            height: 65px;
+            border-bottom: 1px solid $accent2;
+            padding: 12px 18px;
+
+            img {
+              height: 40px;
+            }
+          }
+
+          > ul {
+            @include ulReset();
+            display: block;
+            padding: 12px 18px;
+
+            &.link-headers {
+              font-size: 16px;
+              font-family: $font1;
+              border-bottom: 1px solid #d7d7d7;
+
+              li {
+                padding: 20px 0;
+
+                a {
+                  color: $accent2;
+                  text-decoration: none;
+
+                }
+              }
+            }
+
+            &.links {
+              font-size: $font-size-xs;
+              font-family: $font2;
+
+              li {
+                padding: 15px 0;
+
+                a {
+                  color: $dark1;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     .secondary {
       font: $font1;
       color: $accent2;
       font-size: $font-size-xs;
+      position: relative;
 
       .container {
         background-color: $dark3;
@@ -496,6 +180,47 @@
             height: 14px;
             position: relative;
             top: 2px;
+          }
+        }
+      }
+
+      .secondary-drop {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $dark3;
+        z-index: 1;
+        transition: all .4s;
+        opacity: 0;
+        visibility: hidden;
+
+        &.on{
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .content {
+          text-align: center;
+          padding: 60px 0 30px;
+
+          h3 {
+            @include header3();
+          }
+
+          ul {
+            @include ulReset();
+            margin-top: 35px;
+
+            li {
+              @include header3();
+              margin-bottom: 30px;
+
+              a {
+                color: #fff;
+                text-decoration: none;
+              }
+            }
           }
         }
       }
