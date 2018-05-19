@@ -162,29 +162,7 @@
 
   }
 
-  .buy-with-confidence {
-    background-color: $background;
-    height: 205px;
-    padding-top: 62px;
-
-    h2 {
-      @include header1();
-      color: $dark1;
-      text-align: center;
-      margin: 0;
-    }
-
-    ul.confidence-items {
-      @include ulMenu();
-      display: flex;
-      justify-content: center;
-      margin-top: 32px;
-
-      li {
-        margin: 0 50px;
-      }
-    }
-  }
+  
 }
 @media (max-width:$mobileBreakpoint) {
   .bottom-part {
@@ -224,20 +202,6 @@
       }
     }
 
-    .buy-with-confidence {
-      padding: 35px 0;
-      height: auto;
-
-      ul.confidence-items {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-around;
-
-        li {
-          float: none;
-          margin: 0 4px;
-        }
-      }
-    }
+   
   }
 }

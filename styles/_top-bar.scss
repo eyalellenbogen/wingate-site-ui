@@ -195,7 +195,7 @@
         opacity: 0;
         visibility: hidden;
 
-        &.on{
+        &.on {
           opacity: 1;
           visibility: visible;
         }
@@ -465,67 +465,6 @@
     }
   }
 
-  .plasma {
-    height: 485px;
-    background-image: url('../images/review_bg.png');
-    background-size: cover;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#001935+0,001935+75,001935+100&0+0,0.5+75,1+100 */
-      background: -moz-linear-gradient(top, rgba(0,25,53,0) 0%, rgba(0,25,53,0.5) 75%, rgba(0,25,53,1) 100%);
-      /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(0,25,53,0) 0%,rgba(0,25,53,0.5) 75%,rgba(0,25,53,1) 100%);
-      /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(0,25,53,0) 0%,rgba(0,25,53,0.5) 75%,rgba(0,25,53,1) 100%);
-      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00001935', endColorstr='#001935',GradientType=0 );
-      /* IE6-9 */
-    }
-
-    .container {
-      position: relative;
-      height: 100%;
-
-      .content {
-        transform: translateY(-50%);
-        top: 50%;
-        position: absolute;
-
-        h1 {
-          margin: 0 0 20px;
-          @include headerSuper();
-          font-weight: $font-weight-normal;
-          color: #fff;
-        }
-
-        h2 {
-          margin: 0 0 20px;
-          @include headerBig();
-          color: #fff;
-        }
-
-        button {
-          border: 1px solid $accent2;
-          outline: none;
-          color: $accent2;
-          background-color: transparent;
-          border-radius: 4px;
-          font-size: $font-size-lg;
-          font-family: $font1;
-          font-weight: $font-weight-bold;
-          padding: 6px 12px;
-          width: 250px;
-        }
-      }
-    }
-  }
 }
 @media (max-width:$mobileBreakpoint) {
   .top-bar {
@@ -541,37 +480,5 @@
       display: block;
     }
 
-    .plasma {
-      height: 440px;
-      background-image: url("../images/plasma-mobile.jpg");
-
-      .container {
-        .content {
-          margin: 0;
-          width: 100%;
-          left: 0;
-
-          h1 {
-            font-size: 30px;
-            line-height: 30px;
-            text-align: center;
-          }
-
-          h2 {
-            font-size: 16px;
-            line-height: 16px;
-            text-align: center;
-          }
-
-          button {
-            width: 230px;
-            font-size: $font-size-xs;
-            padding: 16px 0;
-            margin: auto;
-            display: block;
-          }
-        }
-      }
-    }
   }
 }

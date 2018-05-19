@@ -407,87 +407,13 @@
           text-decoration: none;
           height: 28px; }
 
-.top-bar .plasma {
-  height: 485px;
-  background-image: url("../images/review_bg.png");
-  background-size: cover;
-  position: relative; }
-  .top-bar .plasma:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#001935+0,001935+75,001935+100&0+0,0.5+75,1+100 */
-    background: -moz-linear-gradient(top, rgba(0, 25, 53, 0) 0%, rgba(0, 25, 53, 0.5) 75%, #001935 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0, 25, 53, 0) 0%, rgba(0, 25, 53, 0.5) 75%, #001935 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0, 25, 53, 0) 0%, rgba(0, 25, 53, 0.5) 75%, #001935 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00001935', endColorstr='#001935',GradientType=0 );
-    /* IE6-9 */ }
-  .top-bar .plasma .container {
-    position: relative;
-    height: 100%; }
-    .top-bar .plasma .container .content {
-      transform: translateY(-50%);
-      top: 50%;
-      position: absolute; }
-      .top-bar .plasma .container .content h1 {
-        margin: 0 0 20px;
-        font-family: "Syncopate";
-        font-size: 48px;
-        line-height: 48px;
-        font-weight: 500;
-        color: #fff; }
-      .top-bar .plasma .container .content h2 {
-        margin: 0 0 20px;
-        font-family: "Syncopate";
-        font-size: 30px;
-        line-height: 30px;
-        color: #fff; }
-      .top-bar .plasma .container .content button {
-        border: 1px solid #c3920f;
-        outline: none;
-        color: #c3920f;
-        background-color: transparent;
-        border-radius: 4px;
-        font-size: 20px;
-        font-family: "Syncopate";
-        font-weight: 700;
-        padding: 6px 12px;
-        width: 250px; }
-
 @media (max-width: 800px) {
   .top-bar .mini-part {
     display: none; }
   .top-bar .main-part {
     display: none; }
   .top-bar .main-part-mobile {
-    display: block; }
-  .top-bar .plasma {
-    height: 440px;
-    background-image: url("../images/plasma-mobile.jpg"); }
-    .top-bar .plasma .container .content {
-      margin: 0;
-      width: 100%;
-      left: 0; }
-      .top-bar .plasma .container .content h1 {
-        font-size: 30px;
-        line-height: 30px;
-        text-align: center; }
-      .top-bar .plasma .container .content h2 {
-        font-size: 16px;
-        line-height: 16px;
-        text-align: center; }
-      .top-bar .plasma .container .content button {
-        width: 230px;
-        font-size: 14px;
-        padding: 16px 0;
-        margin: auto;
-        display: block; } }
+    display: block; } }
 
 .product-box {
   text-align: center; }
@@ -746,29 +672,6 @@
         color: #1f1500; }
       .bottom-part .bottom-columns > .col.right-col .content p {
         color: #fff; }
-  .bottom-part .buy-with-confidence {
-    background-color: #f7f7f7;
-    height: 205px;
-    padding-top: 62px; }
-    .bottom-part .buy-with-confidence h2 {
-      font-family: "Syncopate";
-      font-size: 20px;
-      color: #1f1500;
-      text-align: center;
-      margin: 0; }
-    .bottom-part .buy-with-confidence ul.confidence-items {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      margin-top: 32px; }
-      .bottom-part .buy-with-confidence ul.confidence-items li {
-        list-style: none; }
-      .bottom-part .buy-with-confidence ul.confidence-items li {
-        float: left; }
-      .bottom-part .buy-with-confidence ul.confidence-items li {
-        margin: 0 50px; }
 
 @media (max-width: 800px) {
   .bottom-part .review-box {
@@ -789,17 +692,7 @@
     .bottom-part .bottom-columns .col.left-col .content, .bottom-part .bottom-columns .col.right-col .content {
       float: none; }
       .bottom-part .bottom-columns .col.left-col .content h3, .bottom-part .bottom-columns .col.right-col .content h3 {
-        margin: 0; }
-  .bottom-part .buy-with-confidence {
-    padding: 35px 0;
-    height: auto; }
-    .bottom-part .buy-with-confidence ul.confidence-items {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-around; }
-      .bottom-part .buy-with-confidence ul.confidence-items li {
-        float: none;
-        margin: 0 4px; } }
+        margin: 0; } }
 
 .footer {
   background-color: #1f1500; }
@@ -808,6 +701,29 @@
     display: table;
     clear: both;
     float: none; }
+  .footer .buy-with-confidence {
+    background-color: #f7f7f7;
+    height: 205px;
+    padding-top: 62px; }
+    .footer .buy-with-confidence h2 {
+      font-family: "Syncopate";
+      font-size: 20px;
+      color: #1f1500;
+      text-align: center;
+      margin: 0; }
+    .footer .buy-with-confidence ul.confidence-items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 32px; }
+      .footer .buy-with-confidence ul.confidence-items li {
+        list-style: none; }
+      .footer .buy-with-confidence ul.confidence-items li {
+        float: left; }
+      .footer .buy-with-confidence ul.confidence-items li {
+        margin: 0 50px; }
   .footer .insta-box .images {
     height: 246px; }
   .footer .insta-box .insta-link {
@@ -902,7 +818,17 @@
 
 @media (max-width: 800px) {
   .footer {
-    padding: 0 18px; }
+    padding: 0; }
+    .footer .buy-with-confidence {
+      padding: 35px 0;
+      height: auto; }
+      .footer .buy-with-confidence ul.confidence-items {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around; }
+        .footer .buy-with-confidence ul.confidence-items li {
+          float: none;
+          margin: 0 4px; }
     .footer .insta-box .images {
       height: 125px; }
     .footer .footer-menu {
@@ -981,3 +907,79 @@ h6 {
 
 * {
   box-sizing: border-box; }
+
+.plasma {
+  height: 485px;
+  background-image: url("../images/review_bg.png");
+  background-size: cover;
+  position: relative; }
+  .plasma:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#001935+0,001935+75,001935+100&0+0,0.5+75,1+100 */
+    background: -moz-linear-gradient(top, rgba(0, 25, 53, 0) 0%, rgba(0, 25, 53, 0.5) 75%, #001935 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 25, 53, 0) 0%, rgba(0, 25, 53, 0.5) 75%, #001935 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 25, 53, 0) 0%, rgba(0, 25, 53, 0.5) 75%, #001935 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00001935', endColorstr='#001935',GradientType=0 );
+    /* IE6-9 */ }
+  .plasma .container {
+    position: relative;
+    height: 100%; }
+    .plasma .container .content {
+      transform: translateY(-50%);
+      top: 50%;
+      position: absolute; }
+      .plasma .container .content h1 {
+        margin: 0 0 20px;
+        font-family: "Syncopate";
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 500;
+        color: #fff; }
+      .plasma .container .content h2 {
+        margin: 0 0 20px;
+        font-family: "Syncopate";
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff; }
+      .plasma .container .content button {
+        border: 1px solid #c3920f;
+        outline: none;
+        color: #c3920f;
+        background-color: transparent;
+        border-radius: 4px;
+        font-size: 20px;
+        font-family: "Syncopate";
+        font-weight: 700;
+        padding: 6px 12px;
+        width: 250px; }
+
+@media (max-width: 800px) {
+  .plasma {
+    height: 440px;
+    background-image: url("../images/plasma-mobile.jpg"); }
+    .plasma .container .content {
+      margin: 0;
+      width: 100%;
+      left: 0; }
+      .plasma .container .content h1 {
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center; }
+      .plasma .container .content h2 {
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center; }
+      .plasma .container .content button {
+        width: 230px;
+        font-size: 14px;
+        padding: 16px 0;
+        margin: auto;
+        display: block; } }
