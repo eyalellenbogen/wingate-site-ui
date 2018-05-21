@@ -58,6 +58,17 @@
     font-size: 15px;
     padding: 8px 24px; }
 
+.header-and-text h3 {
+  font-family: "Syncopate";
+  font-size: 18px;
+  margin: 0 0 20px; }
+
+.header-and-text p {
+  font-family: "Roboto";
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0; }
+
 .search-control {
   position: relative;
   height: 36px; }
@@ -76,6 +87,8 @@
     border-radius: 5px;
     outline: none;
     padding: 6px 30px 6px 14px;
+    font-size: 15px;
+    font-family: "Roboto";
     width: 100%;
     height: 100%;
     position: relative; }
@@ -83,7 +96,8 @@
 .filter-box > .top-part {
   display: flex;
   align-items: center; }
-  .filter-box > .top-part button.close, .filter-box > .top-part button.apply-filters {
+  .filter-box > .top-part button.apply-filters,
+  .filter-box > .top-part button.close {
     display: none; }
   .filter-box > .top-part h3 {
     font-family: "Syncopate";
@@ -678,13 +692,6 @@
     height: 325px; }
     .bottom-part .bottom-columns > .col .content {
       width: 420px; }
-      .bottom-part .bottom-columns > .col .content h3 {
-        font-family: "Syncopate";
-        font-size: 18px; }
-      .bottom-part .bottom-columns > .col .content p {
-        font-family: "Roboto";
-        font-size: 15px;
-        line-height: 24px; }
     .bottom-part .bottom-columns > .col.left-col {
       background: #fff;
       padding-right: 70px; }
@@ -922,68 +929,68 @@
       .footer .footer-menu .contact-info {
         float: none; } }
 
-.gallery .two-col-panel:after {
+.inner-content .gallery .two-col-panel:after {
   content: "";
   display: table;
   clear: both;
   float: none; }
 
-.gallery .two-col-panel > .side-panel {
+.inner-content .gallery .two-col-panel > .side-panel {
   width: 300px;
   float: left; }
 
-.gallery .two-col-panel > .content-panel {
+.inner-content .gallery .two-col-panel > .content-panel {
   padding-left: 50px;
   width: calc(100% - 300px);
   float: left; }
 
-.gallery > .top-part > .breadcrumbs {
+.inner-content .gallery > .top-part > .breadcrumbs {
   font-family: "Roboto";
   font-size: 14px;
   color: #1f1500; }
-  .gallery > .top-part > .breadcrumbs a {
+  .inner-content .gallery > .top-part > .breadcrumbs a {
     text-decoration: none;
     color: #1f1500; }
 
-.gallery > .top-part > .header h2 {
+.inner-content .gallery > .top-part > .header h2 {
   font-family: "Syncopate";
   font-size: 20px;
   color: #094fa3;
   margin: 0; }
 
-.gallery > .top-part > .header .info {
+.inner-content .gallery > .top-part > .header .info {
   font-family: "Roboto";
   font-size: 14px;
   margin-top: 40px; }
-  .gallery > .top-part > .header .info:after {
+  .inner-content .gallery > .top-part > .header .info:after {
     content: "";
     display: table;
     clear: both;
     float: none; }
-  .gallery > .top-part > .header .info > .item-count {
+  .inner-content .gallery > .top-part > .header .info > .item-count {
     float: left; }
-  .gallery > .top-part > .header .info > .paging {
+  .inner-content .gallery > .top-part > .header .info > .paging {
     display: flex;
     align-items: center;
     float: right; }
-    .gallery > .top-part > .header .info > .paging:after {
+    .inner-content .gallery > .top-part > .header .info > .paging:after {
       content: "";
       display: table;
       clear: both;
       float: none; }
-    .gallery > .top-part > .header .info > .paging .text {
+    .inner-content .gallery > .top-part > .header .info > .paging .text {
       float: left;
       font-weight: 300;
       line-height: 25px;
       margin-right: 15px; }
-    .gallery > .top-part > .header .info > .paging ul {
+    .inner-content .gallery > .top-part > .header .info > .paging ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex; }
-      .gallery > .top-part > .header .info > .paging ul li {
+      .inner-content .gallery > .top-part > .header .info > .paging ul li {
         list-style: none; }
-      .gallery > .top-part > .header .info > .paging ul li {
+      .inner-content .gallery > .top-part > .header .info > .paging ul li {
         display: block;
         width: 25px;
         height: 25px;
@@ -991,20 +998,124 @@
         background-color: #fff;
         text-align: center;
         padding-top: 4px; }
-        .gallery > .top-part > .header .info > .paging ul li a {
+        .inner-content .gallery > .top-part > .header .info > .paging ul li a {
           color: #094fa3;
           text-decoration: none; }
-        .gallery > .top-part > .header .info > .paging ul li.selected, .gallery > .top-part > .header .info > .paging ul li:hover {
+        .inner-content .gallery > .top-part > .header .info > .paging ul li.selected, .inner-content .gallery > .top-part > .header .info > .paging ul li:hover {
           background-color: #094fa3; }
-          .gallery > .top-part > .header .info > .paging ul li.selected a, .gallery > .top-part > .header .info > .paging ul li:hover a {
+          .inner-content .gallery > .top-part > .header .info > .paging ul li.selected a, .inner-content .gallery > .top-part > .header .info > .paging ul li:hover a {
             color: #fff; }
-        .gallery > .top-part > .header .info > .paging ul li:last-child {
+        .inner-content .gallery > .top-part > .header .info > .paging ul li:last-child {
           margin-right: 0; }
 
-.gallery > .gallery-content .filter-panel .search-control {
+.inner-content .gallery > .gallery-content .filter-panel .search-control {
   margin-bottom: 28px; }
-  .gallery > .gallery-content .filter-panel .search-control input {
+  .inner-content .gallery > .gallery-content .filter-panel .search-control input {
     background-color: #fff; }
+
+.inner-content .gallery > .gallery-content .filter-panel .filter-box > .content {
+  background-color: #fff;
+  padding: 20px 15px; }
+  .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters li {
+      list-style: none; }
+    .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li {
+      border-bottom: 1px solid #d7d7d7;
+      padding: 15px 8px 5px; }
+      .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li.on .filter-toggle > .right button.expand {
+        display: none; }
+      .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li.on .filter-toggle > .right button.collapse {
+        display: block; }
+      .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li.on .filter-content {
+        display: block; }
+      .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li:last-child {
+        border-bottom: none; }
+      .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: top; }
+        .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-toggle > .left label {
+          font-family: "Roboto";
+          font-size: 16px;
+          color: #094fa3; }
+        .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-toggle > .left .description {
+          font-family: "Roboto";
+          font-size: 12px;
+          color: #d7d7d7; }
+        .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-toggle > .right button {
+          border: none;
+          outline: none;
+          background: none;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+          color: #c3920f;
+          font-size: 16px; }
+          .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-toggle > .right button.collapse {
+            display: none; }
+      .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content {
+        padding-top: 20px;
+        display: none; }
+        .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content ul.filter-items {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content ul.filter-items li {
+            list-style: none; }
+          .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content ul.filter-items li {
+            padding-bottom: 18px;
+            font-family: "Roboto";
+            font-size: 12px;
+            color: #1f1500; }
+            .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content ul.filter-items li > .checkbox-control input {
+              width: 1px;
+              height: 1px;
+              left: -99999px;
+              position: absolute; }
+              .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content ul.filter-items li > .checkbox-control input:checked + label:before {
+                background-color: #c3920f; }
+              .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content ul.filter-items li > .checkbox-control input + label {
+                position: relative;
+                padding-left: 20px; }
+                .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content ul.filter-items li > .checkbox-control input + label:before {
+                  content: "";
+                  position: absolute;
+                  top: 1px;
+                  left: 0;
+                  width: 10px;
+                  height: 10px;
+                  border: 1px solid #c3920f; }
+        .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content .price-filter {
+          display: flex;
+          color: #d2d2d2;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center; }
+          .inner-content .gallery > .gallery-content .filter-panel .filter-box > .content ul.filters > li .filter-content .price-filter input {
+            border: none;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            outline: none;
+            padding: 6px 30px 6px 14px;
+            font-size: 15px;
+            font-family: "Roboto";
+            height: 30px;
+            width: 100px; }
+
+.inner-content .bottom-part .content {
+  background-color: #fff; }
+  .inner-content .bottom-part .content .header-and-text {
+    padding: 30px 0;
+    text-align: center;
+    width: 1020px;
+    margin: auto; }
+    .inner-content .bottom-part .content .header-and-text h3 {
+      color: #094fa3; }
+    .inner-content .bottom-part .content .header-and-text p {
+      color: #1f1500; }
 
 body,
 html {

@@ -118,13 +118,7 @@
       .content {
         width: 420px;
 
-        h3 {
-          @include header2();
-        }
-
-        p {
-          @include paragraphText();
-        }
+       
       }
 
       &.left-col {

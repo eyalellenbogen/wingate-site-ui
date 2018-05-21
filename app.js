@@ -2,7 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initMenu();
     initMobileMenu1();
     initMobileMenu2();
+    initFilterToggles();
 });
+
+function initFilterToggles() {
+    let toggles = document.querySelectorAll('.filters .filter-toggle');
+    toggles.forEach(x => {
+        x.addEventListener('click', () => {
+            let target = x.closest('li');
+            if (target.classList.contains('on')) {
+                target.classList.remove('on');
+            } else {
+                target.classList.add('on');
+            }
+        });
+    });
+}
 
 function initMobileMenu2() {
     let toggle = document.querySelector('.main-part-mobile > .secondary .sub-menu-toggle');

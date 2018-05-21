@@ -1,113 +1,270 @@
-.gallery {
-  .two-col-panel {
-    $sidePanelWidth: 300px;
-    @include clearfix();
+.inner-content {
+  .gallery {
+    .two-col-panel {
+      $sidePanelWidth: 300px;
+      @include clearfix();
 
-    > .side-panel {
-      width: $sidePanelWidth;
-      float: left;
-    }
-
-    > .content-panel {
-      padding-left: 50px;
-      width: calc(100% - #{$sidePanelWidth});
-      float: left;
-    }
-
-  }
-
-  > .top-part {
-    > .breadcrumbs {
-      font-family: $font2;
-      font-size: $font-size-xs;
-      color: $dark1;
-
-      a {
-        text-decoration: none;
-        color: $dark1;
-      }
-    }
-
-    > .header {
-      h2 {
-        @include header1();
-        color: $accent1;
-        margin: 0;
+      > .side-panel {
+        width: $sidePanelWidth;
+        float: left;
       }
 
-      .info {
-        @include clearfix();
+      > .content-panel {
+        padding-left: 50px;
+        width: calc(100% - #{$sidePanelWidth});
+        float: left;
+      }
+
+    }
+
+    > .top-part {
+      > .breadcrumbs {
         font-family: $font2;
         font-size: $font-size-xs;
-        margin-top: 40px;
+        color: $dark1;
 
-        > .item-count {
-          float: left;
+        a {
+          text-decoration: none;
+          color: $dark1;
+        }
+      }
 
+      > .header {
+        h2 {
+          @include header1();
+          color: $accent1;
+          margin: 0;
         }
 
-        > .paging {
-          $pageLinkSize: 25px;
-          display: flex;
-          align-items: center;
-          float: right;
+        .info {
           @include clearfix();
+          font-family: $font2;
+          font-size: $font-size-xs;
+          margin-top: 40px;
 
-          .text {
+          > .item-count {
             float: left;
-            font-weight: $font-weight-light;
-            line-height: $pageLinkSize;
-            margin-right: 15px;
+
           }
 
-          ul {
-            @include ulReset();
+          > .paging {
+            $pageLinkSize: 25px;
             display: flex;
+            align-items: center;
+            float: right;
+            @include clearfix();
 
-            li {
-              display: block;
-              width: $pageLinkSize;
-              height: $pageLinkSize;
-              margin-right: 4px;
-              background-color: #fff;
-              text-align: center;
-              padding-top: 4px;
+            .text {
+              float: left;
+              font-weight: $font-weight-light;
+              line-height: $pageLinkSize;
+              margin-right: 15px;
+            }
 
-              a {
-                color: $accent1;
-                text-decoration: none;
-              }
+            ul {
+              @include ulReset();
+              display: flex;
 
-              &.selected,
-              &:hover {
-                background-color: $accent1;
+              li {
+                display: block;
+                width: $pageLinkSize;
+                height: $pageLinkSize;
+                margin-right: 4px;
+                background-color: #fff;
+                text-align: center;
+                padding-top: 4px;
 
                 a {
-                  color: #fff;
+                  color: $accent1;
+                  text-decoration: none;
                 }
-              }
 
-              &:last-child {
-                margin-right: 0;
+                &.selected,
+                &:hover {
+                  background-color: $accent1;
+
+                  a {
+                    color: #fff;
+                  }
+                }
+
+                &:last-child {
+                  margin-right: 0;
+                }
               }
             }
           }
         }
       }
     }
+
+    > .gallery-content {
+      .filter-panel {
+        .search-control {
+          margin-bottom: 28px;
+
+          input {
+            background-color: #fff;
+          }
+        }
+
+        .filter-box {
+          > .content {
+            background-color: #fff;
+            padding: 20px 15px;
+
+            ul.filters {
+              @include ulReset();
+
+              > li {
+                border-bottom: 1px solid #d7d7d7;
+                padding: 15px 8px 5px;
+
+                &.on {
+                  .filter-toggle {
+                    > .right {
+                      button {
+                        &.expand {
+                          display: none;
+                        };
+
+                        &.collapse {
+                          display: block;
+                        };
+                      }
+                    }
+                  }
+
+                  .filter-content {
+                    display: block;
+                  }
+                }
+
+                &:last-child {
+                  border-bottom: none;
+                }
+
+                .filter-toggle {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: top;
+
+                  > .left {
+                    label {
+                      font-family: $font2;
+                      font-size: 16px;
+                      color: $accent1;
+                    }
+
+                    .description {
+                      @include textSmall();
+                      color: #d7d7d7;
+                    }
+                  }
+
+                  > .right {
+                    button {
+                      @include buttonReset();
+                      color: $accent2;
+                      font-size: 16px;
+
+                      &.collapse {
+                        display: none;
+                      }
+                    }
+                  }
+                }
+
+                .filter-content {
+                  padding-top: 20px;
+                  display: none;
+
+                  ul.filter-items {
+                    @include ulReset();
+
+                    li {
+                      padding-bottom: 18px;
+                      @include textSmall();
+                      color: $dark1;
+
+                      > .checkbox-control {
+                        $checkboxSize: 10px;
+
+                        input {
+                          width: 1px;
+                          height: 1px;
+                          left: -99999px;
+                          position: absolute;
+
+                          &:checked {
+                            & + label {
+                              &:before {
+                                background-color: $accent2;
+                              }
+                            }
+                          }
+
+                          & + label {
+                            position: relative;
+                            padding-left: 20px;
+
+                            &:before {
+                              content: "";
+                              position: absolute;
+                              top: 1px;
+                              left: 0;
+                              width: $checkboxSize;
+                              height: $checkboxSize;
+                              border: 1px solid $accent2;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .price-filter {
+                    display: flex;
+                    color: #d2d2d2;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input {
+                      @include textInput();
+                      height: 30px;
+                      width: 100px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
   }
 
-  > .gallery-content{
-      .filter-panel{
-          .search-control{
-              margin-bottom:28px;
-              input{
-                  background-color: #fff;
-              }
-          }
-          .filter-box{
-              
-          }
+  .bottom-part {
+    .content {
+      background-color: #fff;
+
+      .header-and-text {
+        padding: 30px 0;
+
+        text-align: center;
+        width: $contentWidth;
+        margin: auto;
+
+        h3 {
+          color: $accent1;
+        }
+
+        p {
+          color: $dark1;
+        }
       }
+    }
   }
 }
