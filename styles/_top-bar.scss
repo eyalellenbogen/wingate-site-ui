@@ -332,34 +332,10 @@
       .search-control {
         float: right;
         width: 230px;
-        position: relative;
-        height: 36px;
         position: absolute;
         top: 50%;
         margin-top: -18px;
         right: 0;
-
-        &:after {
-          content: "";
-          width: 20px;
-          height: 20px;
-          display: block;
-          position: absolute;
-          top: 6px;
-          right: 8px;
-          background-image: url("../images/ic-search-24px.svg");
-        }
-
-        input {
-          border: none;
-          background-color: #f2f2f2;
-          border-radius: 5px;
-          outline: none;
-          padding: 6px 30px 6px 14px;
-          width: 100%;
-          height: 100%;
-          position: relative;
-        }
       }
     }
 

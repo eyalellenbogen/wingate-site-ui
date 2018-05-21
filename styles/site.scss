@@ -7,6 +7,7 @@
 @import "./_page-content.scss";
 @import "./_bottom-part.scss";
 @import "./_footer.scss";
+@import "./_gallery.scss";
 
 body,
 html {
@@ -24,6 +25,12 @@ h6 {
 
 * {
   box-sizing: border-box;
+}
+
+.inner-content {
+  background-color: $background;
+  border-top: 1px solid $accent2;
+  padding-top: 30px;
 }
 
 .plasma {

@@ -1,0 +1,113 @@
+.gallery {
+  .two-col-panel {
+    $sidePanelWidth: 300px;
+    @include clearfix();
+
+    > .side-panel {
+      width: $sidePanelWidth;
+      float: left;
+    }
+
+    > .content-panel {
+      padding-left: 50px;
+      width: calc(100% - #{$sidePanelWidth});
+      float: left;
+    }
+
+  }
+
+  > .top-part {
+    > .breadcrumbs {
+      font-family: $font2;
+      font-size: $font-size-xs;
+      color: $dark1;
+
+      a {
+        text-decoration: none;
+        color: $dark1;
+      }
+    }
+
+    > .header {
+      h2 {
+        @include header1();
+        color: $accent1;
+        margin: 0;
+      }
+
+      .info {
+        @include clearfix();
+        font-family: $font2;
+        font-size: $font-size-xs;
+        margin-top: 40px;
+
+        > .item-count {
+          float: left;
+
+        }
+
+        > .paging {
+          $pageLinkSize: 25px;
+          display: flex;
+          align-items: center;
+          float: right;
+          @include clearfix();
+
+          .text {
+            float: left;
+            font-weight: $font-weight-light;
+            line-height: $pageLinkSize;
+            margin-right: 15px;
+          }
+
+          ul {
+            @include ulReset();
+            display: flex;
+
+            li {
+              display: block;
+              width: $pageLinkSize;
+              height: $pageLinkSize;
+              margin-right: 4px;
+              background-color: #fff;
+              text-align: center;
+              padding-top: 4px;
+
+              a {
+                color: $accent1;
+                text-decoration: none;
+              }
+
+              &.selected,
+              &:hover {
+                background-color: $accent1;
+
+                a {
+                  color: #fff;
+                }
+              }
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > .gallery-content{
+      .filter-panel{
+          .search-control{
+              margin-bottom:28px;
+              input{
+                  background-color: #fff;
+              }
+          }
+          .filter-box{
+              
+          }
+      }
+  }
+}
