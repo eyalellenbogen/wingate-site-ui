@@ -1,3 +1,34 @@
+.item-box {
+  $textMargin: 6px;
+  text-align: center;
+
+  .item-image {
+    border: 1px solid #cacaca;
+    width: 170px;
+    height: 232px;
+    background-color: #fff;
+  }
+
+  .item-name {
+    margin-top: $textMargin;
+    @include textMedium();
+    color: $accent1;
+  }
+
+  .old-price {
+    margin-top: $textMargin;
+    @include textSmall();
+    color: $light1;
+    text-decoration: line-through;
+  }
+
+  .price {
+    margin-top: $textMargin;
+    @include textMedium();
+    color: $dark1;
+  }
+}
+
 .product-box {
   text-align: center;
 
@@ -22,42 +53,12 @@
         margin-right: 0;
       }
 
-      .item-box {
-        $textMargin: 6px;
-        text-align: center;
-
-        .item-image {
-          border: 1px solid #cacaca;
-          width: 170px;
-          height: 232px;
-          background-color: #fff;
-        }
-
-        .item-name {
-          margin-top: $textMargin;
-          @include textMedium();
-          color: $accent1;
-        }
-
-        .old-price {
-          margin-top: $textMargin;
-          @include textSmall();
-          color: $light1;
-          text-decoration: line-through;
-        }
-
-        .price {
-          margin-top: $textMargin;
-          @include textMedium();
-          color: $dark1;
-        }
-      }
     }
   }
 
   button.buy-now {
     margin-top: 10px;
-    
+
   }
 }
 @media (max-width:$mobileBreakpoint) {
@@ -69,22 +70,19 @@
       font-size: 20px;
     }
 
-    ul {
-      li {
-        .item-box {
-          .item-name {
-            font-size: $font-size-xs;
-          }
+  }
 
-          .old-price {
-            font-size: $font-size-s;
-          }
+  .item-box {
+    .item-name {
+      font-size: $font-size-xs;
+    }
 
-          .price {
-            font-size: $font-size-lg;
-          }
-        }
-      }
+    .old-price {
+      font-size: $font-size-s;
+    }
+
+    .price {
+      font-size: $font-size-lg;
     }
   }
 }

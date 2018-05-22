@@ -3,7 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu1();
     initMobileMenu2();
     initFilterToggles();
+    initFilterBoxToggle();
 });
+
+function initFilterBoxToggle(){
+    let toggleOn = document.querySelector('.gallery .top-part .header .filters-toggle');
+    let toggleOff = document.querySelector('.gallery-content .filter-box button.close');
+    let slide = document.querySelector('.gallery-content .filter-box');
+    toggleOn.addEventListener('click',()=>{
+        slide.classList.add('on');
+    });
+    toggleOff.addEventListener('click',()=>{
+        slide.classList.remove('on');
+    });
+}
 
 function initFilterToggles() {
     let toggles = document.querySelectorAll('.filters .filter-toggle');

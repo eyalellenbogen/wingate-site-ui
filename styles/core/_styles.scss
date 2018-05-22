@@ -7,6 +7,21 @@
   margin: auto;
 }
 
+.flex-just {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desktop-container {
+  @extend .container;
+}
+
+.mobile-container {
+  width: 100%;
+  padding: 0;
+}
+
 .txt-menu-header {
   @include header2();
   color: $accent2;
@@ -73,7 +88,6 @@
 }
 
 .header-and-text {
-
   h3 {
     @include header2();
     margin: 0 0 20px;
@@ -81,7 +95,7 @@
 
   p {
     @include paragraphText();
-    margin:0;
+    margin: 0;
   }
 }
 
@@ -112,11 +126,20 @@
 .filter-box {
   > .top-part {
     display: flex;
-    align-items: center;
-
-    button.apply-filters,
+    justify-content: start;
     button.close {
-      display: none;
+      @include buttonReset();
+      font-size: 15px;
+      color: $accent2;
+      margin-right: 10px;
+    }
+
+    button.clear-filters {
+      @include buttonReset();
+    }
+
+    button.apply-filters {
+      margin-left:10px;
     }
 
     h3 {
@@ -126,9 +149,6 @@
     }
 
     span.sep {
-      display: block;
-
-      display: block;
       height: 18px;
       width: 1px;
       background-color: #d7d7d7;
@@ -136,20 +156,42 @@
     }
 
     button.btn-action {
-      background: none;
-      outline: none;
-      border: none;
-      padding: 0;
-      margin: 0;
+      @include buttonReset();
       font-family: $font2;
       font-size: $font-size-xs;
       font-weight: bold;
     }
   }
 }
+
+.desktop-view {
+  display: block;
+}
+
+.mobile-view {
+  display: none;
+}
 @media (max-width: $mobileBreakpoint) {
   .container {
     width: 100%;
     padding: 0 18px;
+  }
+
+  .desktop-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .mobile-container {
+    width: 100%;
+    padding: 0 18px;
+  }
+
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
   }
 }
