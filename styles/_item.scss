@@ -1,5 +1,5 @@
 .item-content {
-    margin-top: 30px;
+    margin-top: 60px;
     @include clearfix();
     >.left {
         width: 590px;
@@ -28,10 +28,11 @@
                 }
             }
             >.call-badge {
+                margin-top: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                float:right;
+                float: right;
                 .phone-container {
                     display: flex;
                     align-content: center;
@@ -47,5 +48,69 @@
     >.right {
         width: calc(100% - 590px);
         float: left;
+        padding-left: 60px;
+        >.header {
+            position: relative;
+            h1 {
+                @include headerBig();
+                color: $accent1;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 40px;
+            }
+            img.icon-heart {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        >.price {
+            font-family: $font2;
+            font-weight: 300;
+            .old {
+                text-decoration: line-through;
+                font-size: 24px;
+                color: #a8a8a8;
+            }
+            .new {
+                font-size: 30px;
+                color: $dark1;
+                margin-top: 25 px;
+            }
+        }
+        >.buy-now {
+            margin-top: 42px;
+            button {
+                font-size: 24px;
+                min-width: 300px;
+            }
+        }
+        >.info-table {
+            margin-top: 35px;
+            font-family: $font2;
+            font-size: $font-size-s;
+            color: $dark1;
+            .row {
+                @include clearfix();
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .label {
+                    float: left;
+                    width: 170px;
+                }
+                .data {
+                    float: left;
+                    width: calc(100% - 170px);
+                }
+            }
+        }
+        >.social-links {
+            margin-top: 30px;
+            a {
+                text-decoration: none;
+            }
+        }
     }
 }

@@ -1251,7 +1251,7 @@
           margin-right: 0; } }
 
 .item-content {
-  margin-top: 30px; }
+  margin-top: 60px; }
   .item-content:after {
     content: "";
     display: table;
@@ -1283,6 +1283,7 @@
         display: block;
         background-color: #fff; }
     .item-content > .left .preview > .call-badge {
+      margin-top: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1296,7 +1297,62 @@
           color: #c3920f; }
   .item-content > .right {
     width: calc(100% - 590px);
-    float: left; }
+    float: left;
+    padding-left: 60px; }
+    .item-content > .right > .header {
+      position: relative; }
+      .item-content > .right > .header h1 {
+        font-family: "Syncopate";
+        font-size: 30px;
+        line-height: 30px;
+        color: #094fa3;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 40px; }
+      .item-content > .right > .header img.icon-heart {
+        position: absolute;
+        top: 0;
+        right: 0; }
+    .item-content > .right > .price {
+      font-family: "Roboto";
+      font-weight: 300; }
+      .item-content > .right > .price .old {
+        text-decoration: line-through;
+        font-size: 24px;
+        color: #a8a8a8; }
+      .item-content > .right > .price .new {
+        font-size: 30px;
+        color: #1f1500;
+        margin-top: 25 px; }
+    .item-content > .right > .buy-now {
+      margin-top: 42px; }
+      .item-content > .right > .buy-now button {
+        font-size: 24px;
+        min-width: 300px; }
+    .item-content > .right > .info-table {
+      margin-top: 35px;
+      font-family: "Roboto";
+      font-size: 15px;
+      color: #1f1500; }
+      .item-content > .right > .info-table .row {
+        margin-bottom: 20px; }
+        .item-content > .right > .info-table .row:after {
+          content: "";
+          display: table;
+          clear: both;
+          float: none; }
+        .item-content > .right > .info-table .row:last-child {
+          margin-bottom: 0; }
+        .item-content > .right > .info-table .row .label {
+          float: left;
+          width: 170px; }
+        .item-content > .right > .info-table .row .data {
+          float: left;
+          width: calc(100% - 170px); }
+    .item-content > .right > .social-links {
+      margin-top: 30px; }
+      .item-content > .right > .social-links a {
+        text-decoration: none; }
 
 body,
 html {
