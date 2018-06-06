@@ -1,197 +1,193 @@
 @import "./_vars.scss";
 @import "./_texts.scss";
 @import "./_resets.scss";
-
 .container {
-  width: 1200px;
-  margin: auto;
+    width: 1200px;
+    margin: auto;
+}
+
+.breadcrumbs {
+    font-family: $font2;
+    font-size: $font-size-xs;
+    color: $dark1;
+    a {
+        text-decoration: none;
+        color: $dark1;
+    }
 }
 
 .flex-just {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .desktop-container {
-  @extend .container;
+    @extend .container;
 }
 
 .mobile-container {
-  width: 100%;
-  padding: 0;
+    width: 100%;
+    padding: 0;
 }
 
 .txt-menu-header {
-  @include header2();
-  color: $accent2;
+    @include header2();
+    color: $accent2;
 }
 
 .txt-header2 {
-  @include header1();
-  font-weight: $font-weight-light;
-  columns: $accent1;
+    @include header1();
+    font-weight: $font-weight-light;
+    columns: $accent1;
 }
 
 .txt-header3 {
-  @include header2();
-  font-weight: $font-weight-normal;
-  columns: $accent1;
+    @include header2();
+    font-weight: $font-weight-normal;
+    columns: $accent1;
 }
 
 .txt-banner-header {
-  @include headerSuper();
-  color: #fff;
+    @include headerSuper();
+    color: #fff;
 }
 
 .txt-banner-subheader {
-  @include headerBig();
-  color: #fff;
+    @include headerBig();
+    color: #fff;
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .btn {
-  outline: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  text-align: center;
-
-  &.btn1 {
-    background: none;
-    font-family: $font1;
-    font-weight: $font-weight-bold;
-    border: 1px solid $accent2;
-    color: $accent2;
-    padding: 12px 18px;
-  }
-
-  &.btn2 {
-    font-family: $font2;
-    color: #fff;
-    border: none;
-    background: $accent2;
-    font-size: $font-size-s;
-    padding: 8px 24px;
-  }
+    outline: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-align: center;
+    &.btn1 {
+        background: none;
+        font-family: $font1;
+        font-weight: $font-weight-bold;
+        border: 1px solid $accent2;
+        color: $accent2;
+        padding: 12px 18px;
+    }
+    &.btn2 {
+        font-family: $font2;
+        color: #fff;
+        border: none;
+        background: $accent2;
+        font-size: $font-size-s;
+        padding: 8px 24px;
+    }
 }
+
 @mixin textInput() {
-  border: none;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  outline: none;
-  padding: 6px 30px 6px 14px;
-  font-size: 15px;
-  font-family: $font2;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    outline: none;
+    padding: 6px 30px 6px 14px;
+    font-size: 15px;
+    font-family: $font2;
 }
 
 .header-and-text {
-  h3 {
-    @include header2();
-    margin: 0 0 20px;
-  }
-
-  p {
-    @include paragraphText();
-    margin: 0;
-  }
+    h3 {
+        @include header2();
+        margin: 0 0 20px;
+    }
+    p {
+        @include paragraphText();
+        margin: 0;
+    }
 }
 
 .search-control {
-
-  position: relative;
-  height: 36px;
-
-  &:after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    display: block;
-    position: absolute;
-    top: 6px;
-    right: 8px;
-    background-image: url("../images/ic-search-24px.svg");
-  }
-
-  input {
-    @include textInput();
-    width: 100%;
-    height: 100%;
     position: relative;
-  }
+    height: 36px;
+    &:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        background-image: url("../images/ic-search-24px.svg");
+    }
+    input {
+        @include textInput();
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
 }
 
 .filter-box {
-  > .top-part {
-    display: flex;
-    justify-content: start;
-    button.close {
-      @include buttonReset();
-      font-size: 15px;
-      color: $accent2;
-      margin-right: 10px;
+    >.top-part {
+        display: flex;
+        justify-content: start;
+        button.close {
+            @include buttonReset();
+            font-size: 15px;
+            color: $accent2;
+            margin-right: 10px;
+        }
+        button.clear-filters {
+            @include buttonReset();
+        }
+        button.apply-filters {
+            margin-left: 10px;
+        }
+        h3 {
+            @include header2();
+            color: $accent2;
+            display: block;
+        }
+        span.sep {
+            height: 18px;
+            width: 1px;
+            background-color: #d7d7d7;
+            margin: 0 15px;
+        }
+        button.btn-action {
+            @include buttonReset();
+            font-family: $font2;
+            font-size: $font-size-xs;
+            font-weight: bold;
+        }
     }
-
-    button.clear-filters {
-      @include buttonReset();
-    }
-
-    button.apply-filters {
-      margin-left:10px;
-    }
-
-    h3 {
-      @include header2();
-      color: $accent2;
-      display: block;
-    }
-
-    span.sep {
-      height: 18px;
-      width: 1px;
-      background-color: #d7d7d7;
-      margin: 0 15px;
-    }
-
-    button.btn-action {
-      @include buttonReset();
-      font-family: $font2;
-      font-size: $font-size-xs;
-      font-weight: bold;
-    }
-  }
 }
 
 .desktop-view {
-  display: block;
+    display: block;
 }
 
 .mobile-view {
-  display: none;
-}
-@media (max-width: $mobileBreakpoint) {
-  .container {
-    width: 100%;
-    padding: 0 18px;
-  }
-
-  .desktop-container {
-    width: 100%;
-    padding: 0;
-  }
-
-  .mobile-container {
-    width: 100%;
-    padding: 0 18px;
-  }
-
-  .desktop-view {
     display: none;
-  }
+}
 
-  .mobile-view {
-    display: block;
-  }
+@media (max-width: $mobileBreakpoint) {
+    .container {
+        width: 100%;
+        padding: 0 18px;
+    }
+    .desktop-container {
+        width: 100%;
+        padding: 0;
+    }
+    .mobile-container {
+        width: 100%;
+        padding: 0 18px;
+    }
+    .desktop-view {
+        display: none;
+    }
+    .mobile-view {
+        display: block;
+    }
 }

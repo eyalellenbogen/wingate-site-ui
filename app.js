@@ -6,14 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initFilterBoxToggle();
 });
 
-function initFilterBoxToggle(){
+function initFilterBoxToggle() {
     let toggleOn = document.querySelector('.gallery .top-part .header .filters-toggle');
+    if (!toggleOn) {
+        return;
+    }
     let toggleOff = document.querySelector('.gallery-content .filter-box button.close');
     let slide = document.querySelector('.gallery-content .filter-box');
-    toggleOn.addEventListener('click',()=>{
+    toggleOn.addEventListener('click', () => {
         slide.classList.add('on');
     });
-    toggleOff.addEventListener('click',()=>{
+    toggleOff.addEventListener('click', () => {
         slide.classList.remove('on');
     });
 }

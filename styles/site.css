@@ -6,6 +6,14 @@
   width: 1200px;
   margin: auto; }
 
+.breadcrumbs {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #1f1500; }
+  .breadcrumbs a {
+    text-decoration: none;
+    color: #1f1500; }
+
 .flex-just {
   display: flex;
   justify-content: space-between;
@@ -984,13 +992,6 @@
     padding-left: 50px;
     width: calc(100% - 300px);
     float: left; }
-  .inner-content .gallery > .top-part > .breadcrumbs {
-    font-family: "Roboto";
-    font-size: 14px;
-    color: #1f1500; }
-    .inner-content .gallery > .top-part > .breadcrumbs a {
-      text-decoration: none;
-      color: #1f1500; }
   .inner-content .gallery > .top-part > .header h2 {
     font-family: "Syncopate";
     font-size: 20px;
@@ -1248,6 +1249,54 @@
           margin-right: 0; }
         .inner-content .gallery > .gallery-content > .content-panel ul li:nth-child(2n+0) {
           margin-right: 0; } }
+
+.item-content {
+  margin-top: 30px; }
+  .item-content:after {
+    content: "";
+    display: table;
+    clear: both;
+    float: none; }
+  .item-content > .left {
+    width: 590px;
+    float: left; }
+    .item-content > .left .preview:after {
+      content: "";
+      display: table;
+      clear: both;
+      float: none; }
+    .item-content > .left .preview > .small {
+      float: left;
+      width: 110px; }
+      .item-content > .left .preview > .small a {
+        display: block;
+        width: 100%;
+        height: 165px;
+        background-color: #fff;
+        margin-bottom: 12px; }
+    .item-content > .left .preview > .big {
+      float: right;
+      width: calc(100% - 110px - 40px); }
+      .item-content > .left .preview > .big img {
+        width: 100%;
+        height: 648px;
+        display: block;
+        background-color: #fff; }
+    .item-content > .left .preview > .call-badge {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      float: right; }
+      .item-content > .left .preview > .call-badge .phone-container {
+        display: flex;
+        align-content: center;
+        align-items: center; }
+        .item-content > .left .preview > .call-badge .phone-container .phone {
+          font-family: "Syncopate";
+          color: #c3920f; }
+  .item-content > .right {
+    width: calc(100% - 590px);
+    float: left; }
 
 body,
 html {
