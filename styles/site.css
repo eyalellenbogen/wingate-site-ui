@@ -154,10 +154,10 @@
     font-weight: bold; }
 
 .desktop-view {
-  display: block; }
+  display: block !important; }
 
 .mobile-view {
-  display: none; }
+  display: none !important; }
 
 @media (max-width: 800px) {
   .container, .desktop-container {
@@ -170,9 +170,9 @@
     width: 100%;
     padding: 0 18px; }
   .desktop-view {
-    display: none; }
+    display: none !important; }
   .mobile-view {
-    display: block; } }
+    display: block !important; } }
 
 .top-bar .main-part-mobile {
   display: none; }
@@ -1257,51 +1257,38 @@
     display: table;
     clear: both;
     float: none; }
-  .item-content > .left {
+  .item-content > .item-preview {
     width: 590px;
     float: left; }
-    .item-content > .left .preview:after {
+    .item-content > .item-preview .preview:after {
       content: "";
       display: table;
       clear: both;
       float: none; }
-    .item-content > .left .preview > .small {
+    .item-content > .item-preview .preview > .small {
       float: left;
       width: 110px; }
-      .item-content > .left .preview > .small a {
+      .item-content > .item-preview .preview > .small a {
         display: block;
         width: 100%;
         height: 165px;
         background-color: #fff;
         margin-bottom: 12px; }
-    .item-content > .left .preview > .big {
+    .item-content > .item-preview .preview > .big {
       float: right;
       width: calc(100% - 110px - 40px); }
-      .item-content > .left .preview > .big img {
+      .item-content > .item-preview .preview > .big img {
         width: 100%;
         height: 648px;
         display: block;
         background-color: #fff; }
-    .item-content > .left .preview > .call-badge {
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      float: right; }
-      .item-content > .left .preview > .call-badge .phone-container {
-        display: flex;
-        align-content: center;
-        align-items: center; }
-        .item-content > .left .preview > .call-badge .phone-container .phone {
-          font-family: "Syncopate";
-          color: #c3920f; }
-  .item-content > .right {
+  .item-content > .item-info {
     width: calc(100% - 590px);
     float: left;
     padding-left: 60px; }
-    .item-content > .right > .header {
+    .item-content > .item-info > .header {
       position: relative; }
-      .item-content > .right > .header h1 {
+      .item-content > .item-info > .header h1 {
         font-family: "Syncopate";
         font-size: 30px;
         line-height: 30px;
@@ -1309,50 +1296,100 @@
         padding: 0;
         margin: 0;
         margin-bottom: 40px; }
-      .item-content > .right > .header img.icon-heart {
+      .item-content > .item-info > .header button.favorite {
+        border: none;
+        outline: none;
+        background: none;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
         position: absolute;
         top: 0;
         right: 0; }
-    .item-content > .right > .price {
+    .item-content > .item-info > .price {
       font-family: "Roboto";
       font-weight: 300; }
-      .item-content > .right > .price .old {
+      .item-content > .item-info > .price .old {
         text-decoration: line-through;
         font-size: 24px;
         color: #a8a8a8; }
-      .item-content > .right > .price .new {
+      .item-content > .item-info > .price .new {
         font-size: 30px;
         color: #1f1500;
-        margin-top: 25 px; }
-    .item-content > .right > .buy-now {
+        margin-top: 25px; }
+    .item-content > .item-info > .buy-now {
       margin-top: 42px; }
-      .item-content > .right > .buy-now button {
+      .item-content > .item-info > .buy-now button {
         font-size: 24px;
         min-width: 300px; }
-    .item-content > .right > .info-table {
+    .item-content > .item-info > .info-table {
       margin-top: 35px;
       font-family: "Roboto";
       font-size: 15px;
       color: #1f1500; }
-      .item-content > .right > .info-table .row {
+      .item-content > .item-info > .info-table .row {
         margin-bottom: 20px; }
-        .item-content > .right > .info-table .row:after {
+        .item-content > .item-info > .info-table .row:after {
           content: "";
           display: table;
           clear: both;
           float: none; }
-        .item-content > .right > .info-table .row:last-child {
+        .item-content > .item-info > .info-table .row:last-child {
           margin-bottom: 0; }
-        .item-content > .right > .info-table .row .label {
+        .item-content > .item-info > .info-table .row .label {
           float: left;
           width: 170px; }
-        .item-content > .right > .info-table .row .data {
+        .item-content > .item-info > .info-table .row .data {
           float: left;
           width: calc(100% - 170px); }
-    .item-content > .right > .social-links {
+    .item-content > .item-info > .social-links {
       margin-top: 30px; }
-      .item-content > .right > .social-links a {
+      .item-content > .item-info > .social-links a {
         text-decoration: none; }
+  .item-content .call-badge {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+    width: calc(100% - 110px - 40px); }
+    .item-content .call-badge .phone-container {
+      display: flex;
+      align-content: center;
+      align-items: center; }
+      .item-content .call-badge .phone-container img {
+        margin-right: 10px; }
+      .item-content .call-badge .phone-container .phone {
+        font-family: "Syncopate";
+        color: #c3920f; }
+
+@media (max-width: 800px) {
+  .item-content {
+    margin-top: 20px; }
+    .item-content .item-preview,
+    .item-content .item-info {
+      float: none;
+      width: 100%;
+      padding: 0; }
+    .item-content .top-bar {
+      margin-bottom: 30px; }
+    .item-content > .item-preview {
+      margin-bottom: 60px; }
+      .item-content > .item-preview .preview {
+        background-color: #fff; }
+        .item-content > .item-preview .preview a {
+          margin: auto;
+          display: block;
+          width: 340px;
+          min-height: 500px; }
+    .item-content > .item-info > .buy-now button {
+      min-width: auto;
+      width: 100%; }
+    .item-content > .item-info > .social-links {
+      margin-top: 40px; }
+    .item-content .call-badge {
+      float: none;
+      width: 100%; } }
 
 body,
 html {

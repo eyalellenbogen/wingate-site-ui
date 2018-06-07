@@ -164,11 +164,11 @@
 }
 
 .desktop-view {
-    display: block;
+    display: block !important;
 }
 
 .mobile-view {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: $mobileBreakpoint) {
@@ -185,9 +185,9 @@
         padding: 0 18px;
     }
     .desktop-view {
-        display: none;
+        display: none !important;
     }
     .mobile-view {
-        display: block;
+        display: block !important;
     }
 }
